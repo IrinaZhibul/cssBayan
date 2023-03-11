@@ -1,0 +1,61 @@
+body {
+    background-color: ghostwhite;
+}
+
+h1 {
+    width: 100%;
+    margin-bottom: 1%;
+    font-size: calc(0.3em + 2vw);
+}
+
+h2 {
+    color: darkcyan;
+    font-size: calc(0.5em + 1vw);
+    margin: 1% 0;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.item_input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+}
+
+.item_header {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 0.1em lightgray;
+}
+
+.header_title {
+    
+}
+
+.cross_icon {
+    background-image: url(./assets/images/cross-small-svgrepo-com.svg);
+    opacity: 0;
+    background-size: 1em 1em;
+    width: 1em;
+    height: 1em;
+}
+
+.hidden_image {
+    height: auto;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+
+.image {
+    width: 10em;
+}
