@@ -38,7 +38,7 @@ h2 {
 }
 
 .header_title {
-    
+    transition: 0.5s;
 }
 
 .cross_icon {
@@ -47,15 +47,33 @@ h2 {
     background-size: 1em 1em;
     width: 1em;
     height: 1em;
+    transform: rotate(45deg);
+    transition: 0.7s;
 }
 
 .hidden_image {
     height: auto;
     text-align: center;
     height: 0;
+    transition: 1s;
     overflow: hidden;
 }
 
 .image {
     width: 10em;
+}
+
+@media (hover: hover) {
+    .item_input[name=item]:hover~.hidden_image {
+        height: 8.75em;
+        margin-bottom: 0.8em;
+    }
+
+    .container:hover h2 {
+        color: black;
+    }
+
+    .container:hover .item .item_header .cross_icon {
+        opacity: 1;
+    }
 }
