@@ -1,17 +1,20 @@
 body {
     background-color: ghostwhite;
+    font-family: 'Inter', sans-serif;
 }
 
 h1 {
     width: 100%;
     margin-bottom: 1%;
-    font-size: calc(0.3em + 2vw);
+    font-size: calc(0.6em + 1vw);
+    font-weight: 700;
 }
 
 h2 {
     color: darkcyan;
-    font-size: calc(0.5em + 1vw);
+    font-size: calc(0.4em + 1vw);
     margin: 1% 0;
+    font-weight: 700;
 }
 
 .container {
@@ -43,7 +46,7 @@ h2 {
 
 .cross_icon {
     background-image: url(./assets/images/cross-small-svgrepo-com.svg);
-    opacity: 0;
+    opacity: 1;
     background-size: 1em 1em;
     width: 1em;
     height: 1em;
@@ -63,6 +66,19 @@ h2 {
     width: 10em;
 }
 
+.item_input[name=item]:checked~.hidden_image {
+    height: 8.75em;
+    margin-bottom: 0.8em;
+}
+
+.item_input[name=item]:checked ~ .item_header .cross_icon {
+    transform: rotate(0);
+}
+
+.item_input[name=item]:checked ~ .item_header .header_title {
+    color: black;
+}
+
 @media (hover: hover) {
     .item_input[name=item]:hover~.hidden_image {
         height: 8.75em;
@@ -73,7 +89,59 @@ h2 {
         color: black;
     }
 
+    .cross_icon {
+        opacity: 0;
+    }
+
     .container:hover .item .item_header .cross_icon {
         opacity: 1;
+    }
+
+    .item:hover .item_header .cross_icon {
+        transform: rotate(0);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .image {
+        width: 20em;
+    }
+
+    .item_input[name=item]:checked~.hidden_image {
+        height: 17.5em;
+        margin-bottom: 0.8em;
+    }
+
+    .cross_icon {
+        background-size: 2.5em 2.5em;
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
+
+@media (hover: hover) and (min-width:700px) {
+    .item_input[name=item]:hover~.hidden_image {
+        height: 17.5em;
+        margin-bottom: 0.8em;
+    }
+}
+
+@media  (min-width: 1500px) {
+    h1 {
+        font-size: calc(0.6em + 2vw);
+    }
+
+    .image {
+        width: 25em;
+    }
+
+    .item_input[name=item]:hover~.hidden_image {
+        height: 21.9em;
+        margin-bottom: 0.8em;
+    }
+
+    .item_input[name=item]:checked~.hidden_image {
+        height: 21.9em;
+        margin-bottom: 0.8em;
     }
 }
