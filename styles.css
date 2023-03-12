@@ -1,5 +1,5 @@
 body {
-    background-color: ghostwhite;
+    background-color: linen;
     font-family: 'Inter', sans-serif;
 }
 
@@ -8,10 +8,17 @@ h1 {
     margin-bottom: 1%;
     font-size: calc(0.6em + 1vw);
     font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: -5px -5px 0px;
+    background: radial-gradient(darksalmon 1px, transparent 1px);
+    background-size: 4px 4px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: table;
 }
 
 h2 {
-    color: darkcyan;
+    color: darksalmon;
     font-size: calc(0.4em + 1vw);
     margin: 1% 0;
     font-weight: 700;
@@ -37,7 +44,7 @@ h2 {
 .item_header {
     display: flex;
     justify-content: space-between;
-    border-top: solid 0.1em lightgray;
+    border-top: solid 0.1em rgb(202, 160, 146);
 }
 
 .header_title {
