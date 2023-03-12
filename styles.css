@@ -29,10 +29,6 @@ h2 {
     margin: 0 auto;
 }
 
-.item {
-    cursor: pointer;
-}
-
 .item_input {
     width: 0;
     height: 0;
@@ -87,6 +83,10 @@ h2 {
 }
 
 @media (hover: hover) {
+    .item {
+        cursor: pointer;
+    }
+
     .item_input[name=item]:hover~.hidden_image {
         height: 8.75em;
         margin-bottom: 0.8em;
